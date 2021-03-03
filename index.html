@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        try {
+
+            //throw new Error(" I just got thrown! WEEEE!!!!");
+
+
+            let myIntNumericValue = prompt("Supply a whole number");
+            let myIntNumeric = parseInt(myIntNumericValue);
+
+            if (isNaN(myIntNumericValue)) {
+
+                throw new Error("Error in the myIntNumeric value entered");
+
+            }
+
+            let myFloatNumericValue = prompt("Supply a decimal number");
+            let myFloatNumeric = parseFloat(myFloatNumericValue);
+
+            let mathOnVariables = myIntNumeric * myFloatNumeric;
+            alert(mathOnVariables);
+
+            let isNotNumber = isNaN('xyz');
+            alert(`Not Numeric: ${isNotNumber}`)
+
+            let isNumber = !isNaN(334);
+            alert(`Is Numeric: ${isNumber}`);
+        } catch (error) {
+
+            alert(error.message);
+        }finally{
+
+            alert(" This is executed at the end.");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
